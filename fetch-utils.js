@@ -37,6 +37,26 @@ export async function logout() {
     return (window.location.href = '../');
 }
 
-// function checkError({ data, error }) {
-//     return error ? console.error(error) : data;
-// }
+// everything given is above, functions I am creating are below
+
+
+
+function checkError({ data, error }) {
+    // eslint-disable-next-line no-console
+    return error ? console.error(error) : data;
+}
+export async function fetchItems() {
+    const resp = await client.from('todo_shopping').select('*');
+// console.log('hi', resp);
+    return checkError (resp);
+}
+export async function createItem(description) {
+    const resp = await client.from('todo_shopping').insert({ description });
+// console.log('hi', resp);
+    return checkError(resp);
+}
+export async function completeItem(id) {
+    const resp = await client.from('todo-shopping').update({ complete: true }).match({ id });
+    // console.log(resp);
+    return checkError(resp);
+}
