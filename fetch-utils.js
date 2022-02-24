@@ -46,7 +46,7 @@ function checkError({ data, error }) {
     return error ? console.error(error) : data;
 }
 export async function fetchItems() {
-    const resp = await client.from('todo_shopping').select('*');
+    const resp = await client.from('todo_shopping').select();
 // console.log('hi', resp);
     return checkError (resp);
 }

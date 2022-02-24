@@ -20,6 +20,9 @@ body {
     
     font-family: 'Titillium Web', sans-serif;
     background-color: var(--color2);
+    background-image: url('../assets/gold.jpeg') ;
+    border-image-repeat: round;
+
 }
 
 main {
@@ -128,4 +131,15 @@ footer {
 
 .auth-container button {
     margin: 10px;
+}
+button {
+    font-family:'Dancing Script', cursive;
+    background-color: goldenrod;
+   border-radius: 2em; 
+}
+h1 {
+color: rgb(14, 88, 122);    
+font-family:'Dancing Script', cursive;
+box-shadow: 2em;
+text-decoration: underline;
 }

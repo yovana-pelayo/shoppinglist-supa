@@ -11,10 +11,10 @@ logoutButton.addEventListener('click', () => {
 
 
 // created a function 
+const listEl = document.getElementById('list-item');
 
 //23-25 upon click we are completing the item
 async function displayListItems() {
-    const listEl = document.getElementById('list-item');
     listEl.textContent = '';
 
     const items = await fetchItems();
@@ -27,7 +27,6 @@ async function displayListItems() {
         listEl.append(li);
     }
 }
-displayListItems();
 
 const form = document.getElementById('list-form');
 form.addEventListener('submit', async (e) => {
