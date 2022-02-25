@@ -20,6 +20,10 @@ body {
     
     font-family: 'Titillium Web', sans-serif;
     background-color: var(--color2);
+    background-image: url('../assets/gold2.jpeg') ;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
 }
 
 main {
@@ -48,9 +52,9 @@ section {
 header {
     display: flex;
     justify-content: flex-end;
-    background-color: var(--color3);
     height: var(--header-height);
     box-shadow: var(--shadow);
+    background-color: rgb(10, 96, 117);
 }
 
 h2 {
@@ -81,7 +85,7 @@ footer {
     height: var(--footer-height);
     display: flex;
     justify-content: flex-end;
-    background-color: var(--color3);
+    background-color: burlywood;
     box-shadow: var(--shadow);
 }
 
@@ -128,4 +132,19 @@ footer {
 
 .auth-container button {
     margin: 10px;
+}
+button {
+    font-family:'Dancing Script', cursive;
+    background-color: goldenrod;
+   border-radius: 2em; 
+}
+h1 {
+color: rgb(14, 88, 122);    
+font-family:'Dancing Script', cursive;
+box-shadow: 2em;
+text-decoration: underline;
+}
+#item-list {
+border: 2px goldenrod solid;
+
 }
