@@ -1,4 +1,4 @@
-import { checkAuth, createItem, completeItem, fetchItems, logout } from '../fetch-utils.js';
+import { checkAuth, createItem, completeItem, fetchItems, logout, deleteAllItems } from '../fetch-utils.js';
 import { renderItem } from '../render-utils.js';
 
 checkAuth();
@@ -36,3 +36,10 @@ form.addEventListener('submit', async (e) => {
     displayListItems();
     form.reset();
 });
+const deleteB = document.getElementById('delete');
+
+deleteB.addEventListener('click', async () => {
+    await deleteAllItems();
+    displayListItems();
+});
+displayListItems();
